@@ -18,10 +18,6 @@ public class User {
     @Column
     private Byte age;
 
-    @Override
-    public String toString() {
-        return String.format("User with id '%s': name = '%s', lastName = '%s', age = '%d'", getId(), getName(), getLastName(), getAge());
-    }
 
     public User() {
 
@@ -63,5 +59,10 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("User with id '%s': name = '%s', lastName = '%s', age = '%d'", getId(), getName(), getLastName(), getAge());
     }
 }
