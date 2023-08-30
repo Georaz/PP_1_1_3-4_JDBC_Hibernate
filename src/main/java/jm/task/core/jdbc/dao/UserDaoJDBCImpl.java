@@ -12,15 +12,7 @@ import java.util.List;
 
 
 public class UserDaoJDBCImpl implements UserDao {
-    private static Connection connection;
-
-    static {
-        try {
-            connection = Util.getDBConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+    private static Connection connection = Util.getDBConnection();
 
     public UserDaoJDBCImpl() {
     }

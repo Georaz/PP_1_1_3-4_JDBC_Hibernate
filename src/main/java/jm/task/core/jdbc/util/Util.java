@@ -10,7 +10,7 @@ public class Util {
     private static final String PASSWORD = "georaz";
     private static Connection con;
 
-    public static Connection getDBConnection() throws SQLException {
+    public static Connection getDBConnection() {
         try {
             con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
             System.out.println("Соединение с БД установлено.");
